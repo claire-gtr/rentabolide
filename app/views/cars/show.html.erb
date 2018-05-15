@@ -2,19 +2,19 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-6">
-      <div class="card">
         <h1><%= @car.name %></h1>
         <h2><%= @car.model %></h2>
         <p><%= @car.description %></p>
         <p><%= @car.user.email %></p>
       </div>
-      <%= simple_form_for([@car, @booking]) do |f| %>
-      <%= f.input :start_date, as: :date, html5: true %>
-      <%= f.button :submit, class: "btn btn-info"  %>
-      <% end %>
     </div>
 
-    <img src="https://static.canalblog.com/storagev1/aurelietorralba.canalblog.com/ibiza_ace.jpg" alt="kevin">
+      <%= simple_form_for([@car, @booking]) do |f| %>
+      <%= f.input :start_time, as: :date %>
+      <%= f.input :end_time, as: :date %>
+      <%= f.button :submit, class: "btn btn-success"  %>
+      <% end %>
+  <br>
+  <%=link_to "Retour", root_path, class: "btn btn-primary" %>
   </div>
 
-  <%=link_to "Retour", root_path, class: "btn btn-info" %>
