@@ -1,5 +1,6 @@
 puts 'Cleaning database...'
 Car.destroy_all
+User.destroy_all
 kevin = User.create!(email: "kevin@wanadoo.com", password: "kekedu38")
 
 
@@ -16,6 +17,42 @@ cars_attributes = [
     name: "Le lézard",
     model: "Peugeot 206",
     description: "Néon cup, jantes atomik 17 pouces, son surround, portes papillon, prises d'air racing"
+  },
+  {
+    user: kevin,
+    name: "La fusée de la galaxie",
+    model: "Renault r21",
+    description: "Ailerons de toit, paupières de phare et de pare brise, échappement quadri-sorties"
+  },
+  {
+    user: kevin,
+    name: "La fusée de la galaxie",
+    model: "Renault r21",
+    description: "Ailerons de toit, paupières de phare et de pare brise, échappement quadri-sorties"
+  },
+  {
+    user: kevin,
+    name: "La fusée de la galaxie",
+    model: "Renault r21",
+    description: "Ailerons de toit, paupières de phare et de pare brise, échappement quadri-sorties"
+  },
+  {
+    user: kevin,
+    name: "La fusée de la galaxie",
+    model: "Renault r21",
+    description: "Ailerons de toit, paupières de phare et de pare brise, échappement quadri-sorties"
+  },
+  {
+    user: kevin,
+    name: "La fusée de la galaxie",
+    model: "Renault r21",
+    description: "Ailerons de toit, paupières de phare et de pare brise, échappement quadri-sorties"
+  },
+  {
+    user: kevin,
+    name: "La fusée de la galaxie",
+    model: "Renault r21",
+    description: "Ailerons de toit, paupières de phare et de pare brise, échappement quadri-sorties"
   },
   {
     user: kevin,
