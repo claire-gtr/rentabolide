@@ -1,13 +1,13 @@
 class BookingsController < ApplicationController
   def index
-   @booking = Booking.all
+   @booking = current_user.bookings
  end
 
  def create
    @car = Car.find(params[:car_id])
    @booking = @car.bookings.new(booking_params)
    if @booking.save
-     redirect_to car_path(@car)
+     redirect_to bookings_path
    else
      render "cars/show"
    end
