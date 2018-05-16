@@ -1,9 +1,10 @@
 class BookingsController < ApplicationController
   def index
-   @booking = current_user.bookings
- end
+   @bookings = current_user.bookings
+   @bookings = Booking.all
+   end
 
- def create
+  def create
    @car = Car.find(params[:car_id])
    @booking = @car.bookings.new(booking_params)
    if @booking.save
@@ -11,11 +12,11 @@ class BookingsController < ApplicationController
    else
      render "cars/show"
    end
- end
+  end
 
- private
+  private
 
- def booking_params
+  def booking_params
    params.require(:booking).permit(:start_time, :end_time, :car_id, :user_id)
- end
+  end
 end
