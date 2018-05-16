@@ -4,11 +4,11 @@
    <%=link_to "Retour", root_path %>
    <% @bookings.each do |booking| %>
      <div class="card">
-       <h4>Véhicule réservé : <%= @booking.car.user %> le : <%= @booking.created_at %></h4>
-       <h4>Propriétaire : <%= @booking.user.first_name %> <%= @booking.user.last_name %></h4>
-       <h6>Modèle :<%= @booking.car.model %></h6>
-       <p>Description :<%= @booking.car.description %></p>
-       <h5>Du :<%= @booking.start_time %> au <%= @booking.end_time %></h5>
+       <h4>Véhicule réservé : <%= booking.car.user %> le : <%= booking.created_at %></h4>
+       <h4>Propriétaire : <%= booking.user.email %><h4>
+       <h6>Modèle :<%= booking.car.model %></h6>
+       <p>Description :<%= booking.car.description %></p>
+       <h5>Du :<%= booking.start_time %> au <%= booking.end_time %></h5>
      </div>
    <% end %>
  </div>
