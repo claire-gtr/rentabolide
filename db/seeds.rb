@@ -1,4 +1,5 @@
 puts 'Cleaning database...'
+Booking.destroy_all
 Car.destroy_all
 User.destroy_all
 kevin = User.create!(email: "kevin@wanadoo.com", password: "kekedu38")
