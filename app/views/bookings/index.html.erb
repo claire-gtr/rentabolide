@@ -1,17 +1,19 @@
 <div class="container">
- <div class="row">
-   <h2>Mes réservations :</h2>
-   <%=link_to "Retour", root_path %>
-   <% @bookings.each do |booking| %>
-     <div class="card">
-       <h4>Véhicule réservé : <%= booking.car.name %> </h4>
-       <h4>Réservation effectuée le : <%= booking.created_at %></h4>
-       <h4>Propriétaire : <%= booking.user.email %><h4>
-       <h6>Modèle :<%= booking.car.model %></h6>
-       <p>Description :<%= booking.car.description %></p>
-       <h5>Du :<%= booking.start_time %> au <%= booking.end_time %></h5>
-       <h6>Réservation effectuée le : <%= booking.created_at %></h6>
-     </div>
-   <% end %>
- </div>
+  <div class="card-reservation">
+   <div class="row">
+     <h2>Mes réservations :</h2>
+     <%=link_to "Retour", root_path %>
+     <% @bookings.each do |booking| %>
+       <div>
+         <h4>Véhicule réservé : <%= booking.car.name %> </h4>
+         <h4>Réservation effectuée le : <%= booking.created_at %></h4>
+         <h4>Propriétaire : <%= booking.car.user %><h4>
+         <h6>Modèle :<%= booking.car.model %></h6>
+         <p>Description :<%= booking.car.description %></p>
+         <h5>Du :<%= booking.start_time %> au <%= booking.end_time %></h5>
+         <h6>Réservation effectuée le : <%= booking.created_at %></h6>
+       </div>
+     <% end %>
+   </div>
+  </div>
 </div>

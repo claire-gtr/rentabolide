@@ -45,8 +45,8 @@
              <h4><%= car.name %></h4>
              <h6><%= car.model %></h6>
              <h6><%= car.description %></h6>
-             <br> 
-             <%=link_to "See more", car_path(car) %>
+             <br>
+             <%= link_to "See more", car_path(car), class: "btn btn-primary" %>
            </div>
        </div>
      </div>
