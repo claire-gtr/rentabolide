@@ -1,4 +1,10 @@
 #map {
+  flex: 0 0 450px;
   width: 30%;
-  height: 400px
+  height: 600px;
+  border-radius: 15px;
+  border: 2px solid red;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 60px !important;
+  margin: 60px
 }
