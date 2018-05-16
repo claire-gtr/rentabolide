@@ -1,12 +1,14 @@
 class BookingsController < ApplicationController
   def index
-   @bookings = current_user.bookings
-   @bookings = Booking.all
+   @bookings = Booking.where(user_id: current_user)
    end
 
   def create
    @car = Car.find(params[:car_id])
-   @booking = @car.bookings.new(booking_params)
+   @booking = Booking.new(booking_params)
+   @booking.car = @car
+   @booking.user = current_user
+
    if @booking.save
      redirect_to bookings_path
    else
@@ -17,6 +19,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-   params.require(:booking).permit(:start_time, :end_time, :car_id, :user_id)
+   params.permit(:start_time, :end_time)
   end
 end
