@@ -48,10 +48,11 @@
              <br>
              <%= link_to "See more", car_path(car), class: "btn btn-primary" %>
            </div>
-       </div>
-     </div>
-   <% end %>
-   </div>
-</div>
 
-<div class="map" id="map", data-markers="<%= @markers.to_json %>"></div>
+       </div>
+     <% end %>
+     </div>
+  </div>
+
+  <div id="map", data-markers="<%= @markers.to_json %>"></div>
+</div>

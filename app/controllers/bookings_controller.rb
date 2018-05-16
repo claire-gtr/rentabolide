@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
    @booking.car = @car
    @booking.user = current_user
 
+
    if @booking.save
      redirect_to bookings_path
    else
@@ -19,6 +20,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-   params.permit(:start_time, :end_time)
+   params.require(:booking).permit(:start_time, :end_time)
   end
 end
