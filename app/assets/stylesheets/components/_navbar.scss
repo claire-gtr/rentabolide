@@ -79,7 +79,9 @@
   border-top: 1px solid #E6E6E6;
 }
 
-.navbar-wagon a {
+.neon-link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   text-align:center;
   font-size:25px;
