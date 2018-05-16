@@ -78,3 +78,97 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+.navbar-wagon a {
+  text-decoration: none;
+  text-align:center;
+  font-size:25px;
+  margin:20px 0 20px 0;
+  color:#ffffff;
+  text-shadow: 0 0 10px #ffffff,
+             0 0 20px  #ffffff,
+             0 0 30px  #ffffff,
+             0 0 40px  #228DFF,
+             0 0 70px  #228DFF,
+             0 0 80px  #228DFF,
+             0 0 100px #228DFF,
+             0 0 150px #228DFF;
+  /*Animation*/
+  -webkit-animation: neonAnimation 1.5s ease-in-out infinite alternate;
+  -moz-animation: neonAnimation 1.5s ease-in-out infinite alternate;
+  animation: neonAnimation 1.5s ease-in-out infinite alternate;
+}
+
+
+/*Webkit prefix*/
+@-webkit-keyframes neonAnimation {
+    from {
+      text-shadow: 0 0 10px #ffffff,
+                 0 0 20px  #ffffff,
+                 0 0 30px  #ffffff,
+                 0 0 40px  #228DFF,
+                 0 0 70px  #228DFF,
+                 0 0 80px  #228DFF,
+                 0 0 100px #228DFF,
+                 0 0 150px #228DFF;
+    }
+    to {
+      text-shadow: 0 0 5px #ffffff,
+                 0 0 10px #ffffff,
+                 0 0 15px #ffffff,
+                 0 0 20px #228DFF,
+                 0 0 35px #228DFF,
+                 0 0 40px #228DFF,
+                 0 0 50px #228DFF,
+                 0 0 75px #228DFF;
+    }
+}
+
+
+/*Moz prefix*/
+@-moz-keyframes neonAnimation {
+    from {
+      text-shadow: 0 0 10px #ffffff,
+                 0 0 20px  #ffffff,
+                 0 0 30px  #ffffff,
+                 0 0 40px  #e84118,
+                 0 0 70px  #e84118,
+                 0 0 80px  #e84118,
+                 0 0 100px #e84118,
+                 0 0 150px #e84118;
+    }
+    to {
+      text-shadow: 0 0 5px #ffffff,
+                 0 0 10px #ffffff,
+                 0 0 15px #ffffff,
+                 0 0 20px #e84118,
+                 0 0 35px #e84118,
+                 0 0 40px #e84118,
+                 0 0 50px #e84118,
+                 0 0 75px #e84118;
+    }
+}
+
+/*No prefix*/
+@keyframes neonAnimation {
+    from {
+      text-shadow: 0 0 10px #ffffff,
+                 0 0 20px  #ffffff,
+                 0 0 30px  #ffffff,
+                 0 0 40px  #e84118,
+                 0 0 70px  #e84118,
+                 0 0 80px  #e84118,
+                 0 0 100px #e84118,
+                 0 0 150px #e84118;
+    }
+    to {
+      text-shadow: 0 0 5px #ffffff,
+            0 0 10px #ffffff,
+            0 0 15px #ffffff,
+            0 0 20px #e84118,
+            0 0 35px #e84118,
+            0 0 40px #e84118,
+            0 0 50px #e84118,
+            0 0 75px #e84118;
+    }
+}
