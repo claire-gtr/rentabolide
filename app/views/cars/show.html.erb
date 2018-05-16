@@ -10,9 +10,9 @@
     </div>
 
       <%= simple_form_for([@car, @booking]) do |f| %>
-      <%= f.input :start_time, as: :date %>
-      <%= f.input :end_time, as: :date %>
-      <%= link_to "Create Booking", bookings_path, class: "btn btn-success"  %>
+      <%= f.input :start_time, as: :date, html5: true %>
+      <%= f.input :end_time, as: :date, html5: true  %>
+      <%= link_to "Create Booking", car_bookings_path(@car), method: :post, class: "btn btn-success"  %>
       <% end %>
   <br>
   <%=link_to "Retour", root_path, class: "btn btn-primary" %>
