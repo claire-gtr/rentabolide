@@ -36,9 +36,9 @@
 
 
 <div class="container">
- <div class="row">
+  <div class="row">
    <% @cars.each do |car| %>
-   <div class="back-card col-xs-12 col-sm-4 col-md-4">
+   <div class="back-card col-md-4">
        <div class="card">
          <div class="card-description">
            <%= image_tag car.photo_url %>
@@ -48,8 +48,8 @@
            <%=link_to "See more", car_path(car) %>
          </div>
      </div>
-     <% end %>
-  </div>
+   </div>
+   </div>
 </div>
 
 <div
