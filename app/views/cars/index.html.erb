@@ -46,7 +46,9 @@
                <h6><%= car.model %></h6>
                <h6><%= car.description %></h6>
                <br> <br>
-               <%=link_to "See more", car_path(car) %>
+               <div class="see-more">
+                <%=link_to "See more", car_path(car), class: "btn btn-success btn-sm" %>
+               </div>
              </div>
          </div>
        </div>
