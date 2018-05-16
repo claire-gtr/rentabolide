@@ -41,16 +41,15 @@
    <div class="back-card col-xs-12 col-sm-4 col-md-4">
        <div class="card">
          <div class="card-description">
-           <%= image_tag "tuning_6.jpg" %>
+           <%= image_tag car.photo_url %>
            <h4><%= car.name %></h4>
            <h6><%= car.model %></h6>
            <h6><%= car.description %></h6>
            <%=link_to "See more", car_path(car) %>
          </div>
-         <a class="card-link" href="#" ></a>
-       </div>
-   </div>
-   <% end %>
+     </div>
+     <% end %>
+  </div>
 </div>
 
 <div
