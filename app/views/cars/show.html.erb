@@ -12,7 +12,7 @@
       <%= simple_form_for([@car, @booking]) do |f| %>
       <%= f.input :start_time, as: :date %>
       <%= f.input :end_time, as: :date %>
-      <%= f.button :submit, class: "btn btn-success"  %>
+      <%= link_to "Create Booking", bookings_path, class: "btn btn-success"  %>
       <% end %>
   <br>
   <%=link_to "Retour", root_path, class: "btn btn-primary" %>
