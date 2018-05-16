@@ -2,6 +2,15 @@ class CarsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @cars = Car.all
+
+    @cars = Car.where.not(latitude: nil, longitude: nil)
+
+    @markers = @cars.map do |car|
+      {
+        lat: car.latitude,
+        lng: car.longitude
+      }
+    end
   end
 
   def show
