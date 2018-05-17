@@ -34,8 +34,9 @@
   </a>
 </div>
 
+<div class="main-container">
 
-<div class="container">
+<div class="cards-container">
   <div class="row">
    <% @cars.each do |car| %>
      <div class="col-md-4">
@@ -53,6 +54,8 @@
      <% end %>
      </div>
   </div>
+    </div>
 
   <div id="map", data-markers="<%= @markers.to_json %>"></div>
+
 </div>
