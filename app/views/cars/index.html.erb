@@ -35,27 +35,26 @@
 </div>
 
 <div class="main-container">
-
-
-<div class="cards-container">
-  <div class="row">
-   <% @cars.each do |car| %>
-     <div class="col-md-4">
-         <div class="card">
-           <div class="card-description">
-             <%= image_tag car.photo_url %>
-             <h4><%= car.name %></h4>
-             <h6><%= car.model %></h6>
-             <h6><%= car.description %></h6>
-             <br>
-             <%= link_to "See more", car_path(car), class: "btn btn-primary" %>
-           </div>
+  <div class="cards-container">
+    <div class="row">
+     <% @cars.each do |car| %>
+       <div class="col-xs-12 col-sm-6 col-md-6">
+           <div class="card">
+             <div class="card-description">
+               <%= image_tag car.photo_url %>
+               <h4><%= car.name %></h4>
+               <h6><%= car.model %></h6>
+               <h6><%= car.description %></h6>
+               <br> <br>
+               <div class="see-more">
+                <%=link_to "See more", car_path(car), class: "btn btn-success btn-sm" %>
+               </div>
+             </div>
+         </div>
        </div>
      <% end %>
      </div>
   </div>
-    </div>
 
   <div id="map", data-markers="<%= @markers.to_json %>"></div>
-
 </div>
