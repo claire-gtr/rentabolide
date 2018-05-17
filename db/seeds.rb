@@ -13,9 +13,9 @@ cars_attributes = [
     user: kevin,
     name: "La ratisseuse",
     model: "Citroen BX",
-    address: "107 cours Balguerie Stuttenberg, Bordeaux",
+    address: "107 Cours Balguerie Stuttenberg, Bordeaux",
     photo_url: "http://up.autotitre.com/f909b06733.jpg",
-    description: "Jantes targa racing 15 pouces, rétros m3, hp oxygen 3 voies 170w source sony s2200 cdr ampli boa 800w + caisson accoustique 1000w jbl"
+    description: "Jantes targa racing 15 pouces, rétros m3, hp oxygen 3 voies 170w source sony s2200 cdr ampli boa 800w"
   },
   {
     user: kevin,
@@ -47,7 +47,7 @@ cars_attributes = [
     model: "Renault r21",
     address: "4 allée des Bruyères 56400 Brech",
     photo_url: "http://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2016/07/17/node_24265/804851/public/2016/07/17/B979228559Z.1_20160717104722_000%2BGKB77Q12H.1-0.jpg?itok=CcyKWq1B",
-    description: "Ailerons de toit, paupières de phare et de pare brise, échappement quadri-sorties"
+    description: "Jantes Momo 16 pouces, flammes spermatiques, bas de caisse aérodynamiques"
   },
   {
     user: kevin,
@@ -55,7 +55,7 @@ cars_attributes = [
     name: "Camping tuning car",
     model: "Peugeot 206 CC",
     photo_url: "http://eeena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2017/06/29/node_30124/2062894/public/2017/06/29/B9712462378Z.1_20170629092409_000%2BGJD9BH6L9.1-0.jpg?itok=9UzqmqQq",
-    description: "Ailerons de toit, paupières de phare et de pare brise, échappement quadri-sorties"
+    description: "Portières Lambo, jantes chromées 20 pouces, remorque rabaissé avec spoiler intégré"
   },
   {
     user: kevin,
@@ -63,7 +63,7 @@ cars_attributes = [
     name: "Orange mékanik",
     model: "Peugeot 106",
     photo_url: "http://image.noelshack.com/fichiers/2014/37/1410731648-expo-tuning.jpg",
-    description: "Ailerons de toit, paupières de phare et de pare brise, échappement quadri-sorties"
+    description: "Capot carbone, sièges baquets, vitres tintées, pare-choc performance"
   },
   {
     user: kevin,
@@ -71,7 +71,7 @@ cars_attributes = [
     name: "Mistery machine",
     model: "Fiat Multipla",
     photo_url: "http://images.forum-auto.com/mesimages/631940/775153461.jpg",
-    description: "Ailerons de toit, paupières de phare et de pare brise, échappement quadri-sorties"
+    description: "Jantes shuriken, bourrelet racing, peinture métallique"
   },
   {
     user: kevin,
@@ -79,7 +79,15 @@ cars_attributes = [
     name: "Méga Van",
     model: "Ford Gran Tourneo",
     photo_url: "http://images.forum-auto.com/mesimages/1067822/IMG44711.jpg",
-    description: "Ailerons de toit, paupières de phare et de pare brise, échappement quadri-sorties"
+    description: "Pare-buffle, flammes du désert, peinture de femme attrayante"
+  },
+  {
+    user: kevin,
+    address: "36 Rue de la Communauté Urbaine, 59100 Roubaix",
+    name: "Daim Guerie",
+    model: "BMW M3 Cabrio",
+    photo_url: "http://img.xooimage.com/files28/6/4/e/bmw--bmw-3er-extr...ng-_2864-1f2791a.jpg",
+    description: "Peinture cuivrée, TV 20 pouces dans le coffre, sellerie daim"
   }
 ]
 Car.create!(cars_attributes)
