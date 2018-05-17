@@ -9,6 +9,8 @@
                <h6><%= car.model %></h6>
                <h6><%= car.description %></h6>
                <br> <br>
+               <%= link_to "Supprimer mon bolide", my_car_path(car), method: :delete,
+      data: { confirm: "Jacky tunning, es-tu certain de vouloir retirer ton bolide de Rent a bolide ?" }  %>
              </div>
          </div>
        </div>
