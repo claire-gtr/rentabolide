@@ -1,6 +1,6 @@
 <div class="banner" style="background-image: url('https://images.unsplash.com/photo-1503221507150-dcb5a13416ca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e2f066c8543d078fc0f6936ac0bd700d&auto=format&fit=crop&w=3300&q=80');">
   <div class="banner-content">
-    <h1>POUR LES FANS DE BOLIDAGE <span>EXTRÊME</span></h1>
+    <h1>POUR LES FANS DE BOLIDAGE <span class="spanx">X</span><span>TRÊME</span></h1>
 
      <div class="search-form">
        <style>
@@ -14,12 +14,12 @@
               background-position: 10px 10px;
               background-repeat: no-repeat;
               padding: 12px 20px 12px 40px;
-              -webkit-transition: width 0.4s ease-out;
-              transition: width 0.4s ease-out;
+              -webkit-transition: width 0.2s ease-out;
+              transition: width 0.2s ease-out;
           }
 
           input[type=text]:focus {
-              width: 100%;
+              width: 85%;
           }
         </style>
 
@@ -40,7 +40,10 @@
        <div class="col-xs-12 col-sm-6 col-md-6">
            <div class="card">
              <div class="card-description">
+
+
                <%#= image_tag car.photo_url %>
+
                <h4><%= car.name %></h4>
                <h6><%= car.model %></h6>
                <h6><%= car.description %></h6>
