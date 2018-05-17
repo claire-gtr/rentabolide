@@ -52,7 +52,9 @@
 .navbar-wagon-dropdown-menu {
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
-  border-color: #E6E6E6;
+  // border-color: #E6E6E6;
+  background-color: black;
+  color: white;
 }
 .navbar-wagon-dropdown-menu li > a {
   transition: color 0.3s ease;
@@ -64,7 +66,7 @@
 }
 .navbar-wagon-dropdown-menu li > a:hover {
   background: transparent !important;
-  color: black !important;
+  color: white !important;
 }
 .navbar-wagon-dropdown-menu:before {
   content: ' ';
