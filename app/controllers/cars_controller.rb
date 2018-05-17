@@ -2,7 +2,10 @@ class CarsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @cars = Car.all
+    if params[:query].present?
+      @cars = Car.where("model ILIKE ?", "%#{params[:query]}%")
+    else
+      @cars = Car.all
 
     @cars = Car.where.not(latitude: nil, longitude: nil)
 
@@ -13,6 +16,7 @@ class CarsController < ApplicationController
       }
     end
   end
+end
 
   def new
     @car = Car.new
@@ -35,6 +39,6 @@ class CarsController < ApplicationController
   private
 
   def car_params
-    params.require(:car).permit(:name, :description, :model, :address, :user_id)
+    params.require(:car).permit(:name, :description, :model, :address, :user_id, :photo)
   end
 end
