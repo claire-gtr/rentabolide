@@ -31,6 +31,8 @@ end
     end
   end
 
+
+
   def show
     @car = Car.find(params[:id])
     @booking = Booking.new
