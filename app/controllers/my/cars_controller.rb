@@ -8,4 +8,10 @@ class My::CarsController < ApplicationController
     @car.destroy
     redirect_to my_cars_path
   end
+
+  private
+
+  def car_params
+    params.require(:car).permit(:name, :description, :model, :address, :user_id, :photo)
+  end
 end
