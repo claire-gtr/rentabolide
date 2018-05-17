@@ -6,7 +6,7 @@ root to: "cars#index"
  resources :cars, only: [:index, :show, :new, :create, :update, :edit] do
    resources :bookings, only: [:create]
  end
- resources :bookings, only: [:index]
+ resources :bookings, only: [:index, :destroy]
 
  namespace :my do
   resources :cars, only: [:index, :destroy]
