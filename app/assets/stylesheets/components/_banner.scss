@@ -1,12 +1,12 @@
 .banner {
   color: white;
-  text-align: center;
-  height: 100vh;
+
+  height: calc(100vh - 70px);
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
-  justify-content: center;
+
 }
 .banner h1 {
   font-size: 70px;
@@ -22,8 +22,18 @@
   margin-bottom: 30px;
 }
 
-.search-form {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 150px;
+.banner-content {
+  width: 1000px;
+  padding-bottom: 100px;
+  padding-left: 50px;
+}
+
+.banner-content span {
+  font-size: 100px;
+  font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+.banner-content .spanX {
+  font-size: 200px;
+  font-family: 'Montserrat Subrayada', sans-serif;
 }

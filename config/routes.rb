@@ -9,7 +9,7 @@ root to: "cars#index"
  resources :bookings, only: [:index]
 
  namespace :my do
-  resources :cars, only: [:index]
+  resources :cars, only: [:index, :destroy]
 end
 
 end
