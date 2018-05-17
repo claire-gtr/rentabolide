@@ -6,14 +6,19 @@
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <div>
+      <audio controls autoplay>
+        <source src="../assets/techno_tuning.mp3" type="audio/mp3" />
+      </audio>
+    </div>
 
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
     <div class="neon-link">
       <%= link_to "Mes locations", bookings_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Ma voiture", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Ajouter un bolide", new_car_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Mes bolides", my_cars_path, class: "navbar-wagon-item navbar-wagon-link" %>
     </div>
 
       <!-- Avatar with dropdown menu -->
@@ -23,17 +28,17 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+                <i class="fa fa-user"></i> <%= t(".profile", default: "Mon profil") %>
               <% end %>
             </li>
             <li>
               <%= link_to "#" do %>
-                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
+                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Paramètres") %>
               <% end %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Déconnexion") %>
               <% end %>
             </li>
           </ul>
@@ -41,7 +46,7 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Se connecter"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
 
