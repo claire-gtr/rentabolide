@@ -3,6 +3,7 @@ Booking.destroy_all
 Car.destroy_all
 User.destroy_all
 kevin = User.create!(email: "kevin@wanadoo.com", password: "kekedu38")
+etienne = User.create!(email: "etienne@lebolideur.com", password: "vegamissyl")
 
 
 
@@ -18,8 +19,16 @@ cars_attributes = [
     description: "Jantes targa racing 15 pouces, rétros m3, hp oxygen 3 voies 170w source sony s2200 cdr ampli boa 800w"
   },
   {
+    user: etienne,
+    address: "44 avenue Maurice Martin, Arcachon",
+    name: "Vega Missyl",
+    model: "Ford Sierra",
+    photo_url: "http://img.over-blog-kiwi.com/0/93/23/39/20160120/ob_239159_sans-titre-1.jpg",
+    description: "935 chevaux, 80 kilos d'aileron, 380 km/h quand l'accélération n'est qu'à moitié poussée"
+  },
+  {
     user: kevin,
-    name: "Le lézard",
+    name: "Le mante religieuse",
     model: "Peugeot 206",
     address: "60 rue Beaufleury, Bordeaux",
     photo_url: "https://pre00.deviantart.net/2f0c/th/pre/f/2015/159/6/1/driftcup42_by_psykomysik-d8wie98.jpg",
@@ -39,7 +48,7 @@ cars_attributes = [
     name: "Tribal show",
     model: "VW Golf",
     photo_url: "https://i.ytimg.com/vi/B4MQzPXZpRE/maxresdefault.jpg",
-    description: "Ailerons de toit, paupières de phare et de pare brise, échappement quadri-sorties"
+    description: "Peinture tribale, giga caisson extérieur, jantes shuriken"
   },
   {
     user: kevin,
@@ -64,14 +73,6 @@ cars_attributes = [
     model: "Peugeot 106",
     photo_url: "http://image.noelshack.com/fichiers/2014/37/1410731648-expo-tuning.jpg",
     description: "Capot carbone, sièges baquets, vitres tintées, pare-choc performance"
-  },
-  {
-    user: kevin,
-    address: "44 avenue Maurice Martin, Arcachon",
-    name: "Mistery machine",
-    model: "Fiat Multipla",
-    photo_url: "http://images.forum-auto.com/mesimages/631940/775153461.jpg",
-    description: "Jantes shuriken, bourrelet racing, peinture métallique"
   },
   {
     user: kevin,
