@@ -28,7 +28,7 @@
           }
         </style>
 
-      <%= form_tag cars_path, method: :get do %>
+      <%= form_tag cars_path(anchor: "result"), method: :get do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
@@ -41,7 +41,7 @@
 
 <div class="main-container">
   <div class="cards-container">
-    <div class="row">
+    <div id="result" class="row">
      <% @cars.each do |car| %>
        <div class="col-xs-12 col-sm-6 col-md-6">
            <div class="card">
