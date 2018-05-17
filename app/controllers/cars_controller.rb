@@ -25,6 +25,6 @@ end
   private
 
   def car_params
-    params.require(:car).permit(:name, :description, :model, :address)
+    params.require(:car).permit(:name, :description, :model, :address, :photo)
   end
 end
