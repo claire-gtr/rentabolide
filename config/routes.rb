@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 root to: "cars#index"
 
  devise_for :users
- resources :cars, only: [:show] do
+ resources :cars, only: [:show, :index] do
    resources :bookings, only: [:create]
  end
  resources :bookings, only: [:index]

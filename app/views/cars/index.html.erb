@@ -1,7 +1,17 @@
 <div class="banner" style="background-image: url('https://images.unsplash.com/photo-1503221507150-dcb5a13416ca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e2f066c8543d078fc0f6936ac0bd700d&auto=format&fit=crop&w=3300&q=80');">
   <div class="banner-content">
-    <h1>Rent A Bolide</h1>
-    <p>Pour les fans de bolidage extrême</p>
+    <h1>POUR LES FANS DE BOLIDAGE EXTRÊME</h1>
+
+     <div class="search-form">
+      <%= form_tag cars_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Trouve ta charette"
+        %>
+      <% end %>
+    </div>
+
   </div>
 </div>
 
