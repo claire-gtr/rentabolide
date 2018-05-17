@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 root to: "cars#index"
 
  devise_for :users
- resources :cars, only: [:index, :show, :new, :create] do
+ resources :cars, only: [:index, :show, :new, :create, :update, :edit] do
    resources :bookings, only: [:create]
  end
  resources :bookings, only: [:index]
 
  namespace :my do
-  resources :cars, only: [:index]
+  resources :cars, only: [:index, :destroy]
 end
 
 end

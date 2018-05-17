@@ -24,10 +24,41 @@
 
 .banner-content {
   width: 1000px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
   padding-left: 50px;
 }
+
 .banner-content span {
   font-size: 100px;
   font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+.banner-content .spanX {
+  font-size: 200px;
+  font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+.mulet {
+  width: 350px;
+  height: 350px;
+
+  @keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+}
+
+.mulet img {
+    animation: blink 0.4s;
+    animation-iteration-count: infinite;
 }

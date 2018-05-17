@@ -1,8 +1,10 @@
 <%= simple_form_for(@car) do |f| %>
-  <%= f.input :name, placeholder: "The Rocket" %>
-  <%= f.input :model %>
-  <%= f.input :description %>
-  <%= f.input :address %>
+  <%= f.input :name, label: "Modèle", placeholder: "Vega Missyl" %>
+  <%= f.input :model, label: "Modèle", placeholder: "Ford Sierra" %>
+  <%= f.input :description, placeholder: "935 chevaux, 80 kilos d'aileron, 380 km/h quand l'accélération n'est qu'à moitié poussée" %>
+  <%= f.input :address, label: "Addresse", placeholder: "21 rue du Mulet, Tourcoing" %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.input :user_id, input_html: { value: current_user.id}, as: :hidden %>
   <%= f.button :submit, "Valider", class: "btn btn-primary"  %>
 <% end %>

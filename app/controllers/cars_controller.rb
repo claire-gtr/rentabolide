@@ -32,9 +32,21 @@ end
     end
   end
 
+
+
   def show
     @car = Car.find(params[:id])
     @booking = Booking.new
+  end
+
+  def edit
+    @car = Car.find(params[:id])
+  end
+
+  def update
+    @car = Car.find(params[:id])
+    @car.update(car_params)
+    redirect_to my_cars_path
   end
 
   private
