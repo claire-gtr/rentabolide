@@ -36,6 +36,7 @@
 
 <div class="main-container">
 
+
 <div class="cards-container">
   <div class="row">
    <% @cars.each do |car| %>
@@ -49,7 +50,6 @@
              <br>
              <%= link_to "See more", car_path(car), class: "btn btn-primary" %>
            </div>
-
        </div>
      <% end %>
      </div>
