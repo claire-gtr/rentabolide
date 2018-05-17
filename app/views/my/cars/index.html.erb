@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="container">
   <div class="cards-container">
     <div class="row">
      <% @cars.each do |car| %>
@@ -8,6 +8,7 @@
                <h4><%= car.name %></h4>
                <h6><%= car.model %></h6>
                <h6><%= car.description %></h6>
+               <%= cl_image_tag car.photo %>
                <br> <br>
              </div>
          </div>
@@ -15,7 +16,5 @@
      <% end %>
      </div>
   </div>
-
-  <div id="map", data-markers="<%= @markers.to_json %>"></div>
 </div>
 
