@@ -1,0 +1,8 @@
+<%= simple_form_for(@car) do |f| %>
+  <%= f.input :name, placeholder: "The Rocket" %>
+  <%= f.input :model %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.input :user_id, input_html: { value: current_user.id}, as: :hidden %>
+  <%= f.button :submit, "Valider", class: "btn btn-primary"  %>
+<% end %>
