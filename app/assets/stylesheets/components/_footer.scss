@@ -1,6 +1,6 @@
 .footer-distributed{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 	background-color: black;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
@@ -22,7 +22,7 @@
 /* Footer left */
 
 .footer-distributed .footer-left{
-	width: 25%;
+
 }
 
 /* The company logo */
@@ -62,7 +62,7 @@
 /* Footer Center */
 
 .footer-distributed .footer-center{
-	width: 35%;
+
 }
 
 .footer-distributed .footer-center i{
@@ -107,6 +107,8 @@
 
 .footer-distributed .footer-right{
 	width: 20%;
+  vertical-align: center;
+  padding-top: 20px;
 }
 
 .footer-distributed .footer-company-about{
