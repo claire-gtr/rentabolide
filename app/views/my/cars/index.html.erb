@@ -9,6 +9,7 @@
                <h3><%= car.name %></h3>
                <h7><%= car.model %></h7>
                <h7><%= car.description %></h7>
+               <br>
                <%= cl_image_tag car.photo %>
                <br> <br>
                <%= link_to "Modifier mon bolide", edit_car_path(car)%>
