@@ -9,11 +9,22 @@ class CarsController < ApplicationController
 
     @cars = Car.where.not(latitude: nil, longitude: nil)
 
+    # image = {
+    #       url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+    #       # This marker is 20 pixels wide by 32 pixels high.
+    #       size: new google.maps.Size(20, 32),
+    #       # The origin for this image is (0, 0).
+    #       origin: new google.maps.Point(0, 0),
+    #       # The anchor for this image is the base of the flagpole at (0, 32).
+    #       anchor: new google.maps.Point(0, 32)
+    #     }
+
     @markers = @cars.map do |car|
       {
         lat: car.latitude,
         lng: car.longitude,
-        infoWindow: { content: render_to_string(partial: "/cars/marker_content", locals: { car: car }) }
+        infoWindow: { content: render_to_string(partial: "/cars/marker_content", locals: { car: car }) },
+        icon: ActionController::Base.helpers.asset_path("logo_map_4.png")
       }
     end
   end
