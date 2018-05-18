@@ -4,19 +4,27 @@
     <h2>Mes bolides</h2>
      <% @cars.each do |car| %>
        <div class="col-xs-12 col-sm-6 col-md-6">
-           <div class="card">
+           <div class="card" id="bolides">
              <div class="card-description">
                <h3><%= car.name %></h3>
                <h7><%= car.model %></h7>
                <h7><%= car.description %></h7>
                <%= cl_image_tag car.photo %>
-               <br>
+               <br> <br>
                <%= link_to "Modifier mon bolide", edit_car_path(car)%>
                <br>
                <%= link_to "Supprimer mon bolide", my_car_path(car), method: :delete,
       data: { confirm: "Eh gros Jacky, es-tu certain de vouloir retirer ton bolide de Rent A Bolide ?" }  %>
                 <br>
-                <h8>J'ai <%= car.bookings.count%> <%=("reservation").pluralize%> sur mon bolide</h8>
+                <hr>
+                <h8><strong>J'ai <%= car.bookings.count%> <%=("réservation").pluralize%> sur mon bolide</strong></h8> <br>
+                <ul>
+                    <% car.bookings.each do |booking| %>
+                    <li class="text-left"> <h9><%=booking.user.email%></h9>
+                        <h9>loue votre bolide du <%=booking.start_time.strftime("%d/%m/%Y")%> au <%=booking.start_time.strftime("%d/%m/%Y")%> </h9>
+                    </li>
+                    <% end %>
+                </ul>
              </div>
          </div>
        </div>
