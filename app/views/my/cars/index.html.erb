@@ -19,7 +19,7 @@
       data: { confirm: "Eh gros Jacky, es-tu certain de vouloir retirer ton bolide de Rent A Bolide ?" }  %>
                 <br>
                 <hr>
-                <h8><strong>J'ai <%= pluralize car.bookings.count, "réservation(s)"%> sur mon bolide</strong></h8> <br>
+                <h8><strong>J'ai <%= pluralize car.bookings.count, "réservation"%> sur mon bolide</strong></h8> <br>
                 <ul>
                     <% car.bookings.each do |booking| %>
                     <li class="text-left"> <h9><%=booking.user.email%></h9>
