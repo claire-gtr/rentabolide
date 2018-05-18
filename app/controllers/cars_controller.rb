@@ -6,8 +6,9 @@ class CarsController < ApplicationController
       @cars = Car.where("model ILIKE ?", "%#{params[:query]}%")
     else
       @cars = Car.all
+    end
 
-    @cars = Car.where.not(latitude: nil, longitude: nil)
+    @cars = @cars.where.not(latitude: nil, longitude: nil)
 
     # image = {
     #       url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
@@ -28,7 +29,6 @@ class CarsController < ApplicationController
       }
     end
   end
-end
 
   def new
     @car = Car.new
